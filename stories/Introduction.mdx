@@ -1,0 +1,73 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Introduction" />
+
+<style>
+{`
+  .intro h1 { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 56px; line-height: 1.05; letter-spacing: -2px; margin: 0 0 16px; color: #1A1A1A; }
+  .intro h1 em { font-style: italic; font-weight: 400; color: #C42032; }
+  .intro .eyebrow { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: #C42032; margin: 0 0 12px; }
+  .intro .lede { font-size: 18px; line-height: 1.65; color: #666; max-width: 620px; margin: 0 0 32px; }
+  .intro .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 32px 0; }
+  .intro .link { display: block; padding: 16px 20px; border: 1px solid #E0E0E0; border-radius: 8px; text-decoration: none; color: #1A1A1A; transition: all 200ms; }
+  .intro .link:hover { border-color: #C42032; transform: translateY(-2px); }
+  .intro .link strong { display: block; font-size: 14px; margin-bottom: 4px; }
+  .intro .link span { font-size: 12px; color: #666; font-family: monospace; }
+  .intro hr { border: none; border-top: 1px solid #E0E0E0; margin: 48px 0; }
+  .intro h2 { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 32px; margin: 0 0 16px; color: #1A1A1A; letter-spacing: -0.5px; }
+  .intro .rule { background: #F9F0F0; border-left: 3px solid #C42032; padding: 16px 20px; margin: 12px 0; color: #A01A2A; font-weight: 500; font-size: 14px; border-radius: 4px; }
+`}
+</style>
+
+<div className="intro">
+
+<div className="eyebrow">— AIDS UNITED · DESIGN SYSTEM</div>
+
+# A new home for <em>AIDS United</em>.
+
+<p className="lede">
+Source of truth for colors, typography, spacing, components, and patterns used across the
+AIDS United Webflow build. Every name here matches a Figma swatch and a Webflow class — so
+what you see is what gets built.
+</p>
+
+<div className="links">
+  <a className="link" href="https://www.figma.com/design/kKQfjDXn41Kt6FfZEQmoGK" target="_blank">
+    <strong>Figma file →</strong>
+    <span>kKQfjDXn41Kt6FfZEQmoGK</span>
+  </a>
+  <a className="link" href="https://aids-united-project-brief.vercel.app" target="_blank">
+    <strong>Project brief →</strong>
+    <span>aids-united-project-brief</span>
+  </a>
+  <a className="link" href="https://github.com/michellejean4/aids-united-ds" target="_blank">
+    <strong>GitHub repo →</strong>
+    <span>michellejean4/aids-united-ds</span>
+  </a>
+</div>
+
+---
+
+## How to use this
+
+This Storybook is a parallel reference to the Figma file. Designers work in Figma; developers
+work here. Both reference the same `tokens.json` source of truth.
+
+- **Foundations** — colors, type, spacing, radii, shadows
+- **Components** — buttons, inputs, cards
+- **Patterns** — header, footer, hero, stats, donate, newsletter
+- **Accessibility** — contrast pairs and checklist
+
+Every component story shows the HTML structure and the CSS classes that map directly to
+Webflow combo classes.
+
+## Hard rules (non-negotiable)
+
+<div className="rule">No pink. Ever. Not as tint, not as gradient.</div>
+<div className="rule">True brand red #C42032 — NOT the orange-red on the current site.</div>
+<div className="rule">No homemade-looking icons. Use a real icon set.</div>
+<div className="rule">8px button radius. 16px card radius. Stay consistent.</div>
+<div className="rule">No sticky donate button — header donate link is enough.</div>
+<div className="rule">Webflow Localization handles EN/ES — don't bake English into image assets.</div>
+
+</div>
