@@ -2,10 +2,20 @@ import './preview.css';
 
 /** @type { import('@storybook/html').Preview } */
 const preview = {
+  tags: ['autodocs'],
   parameters: {
     layout: 'padded',
     controls: {
       matchers: { color: /(background|color)$/i, date: /Date$/i },
+    },
+    docs: {
+      source: {
+        type: 'code',
+        language: 'html',
+      },
+      canvas: {
+        sourceState: 'shown',
+      },
     },
     backgrounds: {
       default: 'light',
